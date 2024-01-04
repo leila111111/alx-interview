@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+''' module for pascal triangle'''
+
+
 def pascal_triangle(n):
+    '''implementation of pascal's triangle'''
     if n <= 0:
         return []
     triangle = [[1]]
