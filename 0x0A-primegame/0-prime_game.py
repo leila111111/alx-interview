@@ -2,6 +2,7 @@
 """ Prime Game
 """
 
+
 def isWinner(x, nums):
     """Who wins in Prime Game"""
     if x < 1 or not nums:
@@ -12,7 +13,8 @@ def isWinner(x, nums):
     total[0] = False  # 1 is not a prime number
     for index, prime in enumerate(total):
         if prime and index + 1 > 1:
-            for non_prime in range((index + 1) * 2, highest_number + 1, index + 1):
+            for non_prime in range((index + 1) * 2, highest_number + 1,
+                                   index + 1):
                 total[non_prime - 1] = False
     for rnd_numb in nums[:x]:
         count_primes = sum(total[:rnd_numb])
